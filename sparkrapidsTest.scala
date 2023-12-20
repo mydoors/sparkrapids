@@ -35,9 +35,14 @@ val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
 
 joinedDF.show()
 
-// 选择去掉重名列，保留 df1 中的 "_ws.col.Protocol"
-val resultDF = joinedDF.select(df1Renamed($"`ip.src`"), df1Renamed($"`tcp.srcport`"), 
-        df1Renamed($"`ip.dst`"), df1Renamed($"`tcp.dstport`"), df1Renamed($"`_ws.col.Protocol`"))
+val resultDF = joinedDF.select(
+  col("`ip.src`"), 
+  col("`tcp.srcport`"), 
+  col("`ip.dst`"), 
+  col("`tcp.dstport`"), 
+  col("`protocol1`")  // 使用重命名后的列名
+)
+
 
 resultDF.show()
 //输出结果到文件
