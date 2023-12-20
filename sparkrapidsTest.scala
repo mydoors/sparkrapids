@@ -27,8 +27,8 @@ val filteredDF = df.filter($"`ip.src`" === "192.168.5.162")
 val df1Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol1")
 val df2Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol2")
 val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
-  $"df1.ip.src" === $"df2.ip.src" &&
-  $"df1.ip.dst" === $"df2.ip.dst" &&
+  $"df1.`ip.src`" === $"df2.`p.src`" &&
+  $"df1.`ip.dst`" === $"df2.`ip.dst`" &&
   $"df1.protocol1" =!= $"df2.protocol2"
 )
 
@@ -36,8 +36,8 @@ val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
 joinedDF.show()
 
 // 选择去掉重名列，保留 df1 中的 "_ws.col.Protocol"
-val resultDF = joinedDF.select(df1Renamed("ip.src"), df1Renamed("tcp.srcport"), 
-        df1Renamed("ip.dst"), df1Renamed("tcp.dstport"), df1Renamed("_ws.col.Protocol"))
+val resultDF = joinedDF.select(df1Renamed($"`ip.src`"), df1Renamed($"`tcp.srcport`"), 
+        df1Renamed($"`ip.dst`"), df1Renamed($"`tcp.dstport`"), df1Renamed($"`_ws.col.Protocol`"))
 
 resultDF.show()
 //输出结果到文件
