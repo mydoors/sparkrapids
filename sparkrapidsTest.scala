@@ -36,11 +36,11 @@ val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
 joinedDF.show()
 
 val resultDF = joinedDF.select(
-  col("`ip.src`"), 
-  col("`tcp.srcport`"), 
-  col("`ip.dst`"), 
-  col("`tcp.dstport`"), 
-  col("`protocol1`")  // 使用重命名后的列名
+  col("df1.`ip.src`"),        // 指定使用 df1 的 ip.src
+  col("df1.`tcp.srcport`"),   // 指定使用 df1 的 tcp.srcport
+  col("df1.`ip.dst`"),        // 指定使用 df1 的 ip.dst
+  col("df1.`tcp.dstport`"),   // 指定使用 df1 的 tcp.dstport
+  col("df1.protocol1")        // 已经重命名为 protocol1 的 _ws.col.Protocol
 )
 
 
