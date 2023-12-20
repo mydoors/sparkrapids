@@ -24,10 +24,12 @@ val filteredDF = df.filter($"`ip.src`" === "192.168.5.162")
 
 //对同一个 DataFrame 执行自连接（self-join）以查找具有相同源 IP 和目标 IP 但协议不同的记录
 
-val joinedDF = filteredDF.alias("df1").join(filteredDF.alias("df2"),
-  $"df1.`ip.src`" === $"df2.`ip.src`" &&
-  $"df1.`ip.dst`" === $"df2.`ip.dst`" &&
-  $"df1.`_ws.col.Protocol`" =!= $"df2.`_ws.col.Protocol`"
+val df1Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol1")
+val df2Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol2")
+val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
+  $"df1.ip.src" === $"df2.ip.src" &&
+  $"df1.ip.dst" === $"df2.ip.dst" &&
+  $"df1.protocol1" =!= $"df2.protocol2"
 )
 
 
