@@ -31,9 +31,7 @@ val joinedDF = filteredDF.alias("df1").join(filteredDF.alias("df2"),
 )
 
 
-
+joinedDF.show()
 
 //输出结果到 CSV 文件
-joinedDF.write
-  .option("header", "true") // 包含头部信息
-  .csv("/root/spark/data/results.csv")
+joinedDF.write.option("header", "true").csv("/root/spark/data/results.csv")
