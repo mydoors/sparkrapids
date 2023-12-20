@@ -20,13 +20,13 @@ val df = spark.read.format("csv").option("header", "true").load("/root/spark/dat
 df.printSchema()
 df.show()
 // Map 操作：Filter
-val filteredDF = df.filter($"ip.src" === "192.168.5.162")
+val filteredDF = df.filter($"`ip.src`" === "192.168.5.162")
 
 //对同一个 DataFrame 执行自连接（self-join）以查找具有相同源 IP 和目标 IP 但协议不同的记录
 val joinedDF = filteredDf.alias("df1").join(filteredDF.alias("df2"), 
-  col("df1.ip.src") === col("df2.ip.src") && 
-  col("df1.ip.dst") === col("df2.ip.dst") && 
-  col("df1._ws.col.Protocol") =!= col("df2._ws.col.Protocol"))
+  col($"df1.`ip.src`") === col($"df2.`ip.src`") && 
+  col($"df1.`ip.dst`") === col($"df2.`ip.dst`") && 
+  col($"df1.`_ws.col.Protocol`") =!= col($"df2.`_ws.col.Protocol`"))
 
 
 // 输出结果到文件
