@@ -40,7 +40,7 @@ val resultDF = joinedDF.select(
   col("df1.`tcp.srcport`"),   // 指定使用 df1 的 tcp.srcport
   col("df1.`ip.dst`"),        // 指定使用 df1 的 ip.dst
   col("df1.`tcp.dstport`"),   // 指定使用 df1 的 tcp.dstport
-  col("df1.protocol1")        // 已经重命名为 protocol1 的 _ws.col.Protocol
+  col("df1.`_ws.col.Protocol`")        // 已经重命名为 protocol1 的 _ws.col.Protocol
 )
 
 
