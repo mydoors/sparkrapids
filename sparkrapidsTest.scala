@@ -16,6 +16,6 @@ val data = Seq("hello", "world", "this", "is", "rapids").toDF("value")
 processWithRapids(data)
 
 
-val df = spark.read.format("csv").option("header", "true").load("/root/sparktest/data/packets.csv")
+val df = spark.read.format("csv").option("header", "true").load("/root/spark/data/packets.csv")
 df.printSchema()
 df.show()
