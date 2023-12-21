@@ -27,7 +27,7 @@ df.count()
 // Map 操作：Filter
 // 过滤出 ip.src 或 ip.dst 等于 "192.168.5.162" 的记录
 val filteredDF = df.filter($"`ip.src`" === "192.168.5.162" || $"`ip.dst`" === "192.168.5.162")
-
+filteredDF.show()
 // 对同一个 DataFrame 执行自连接（self-join）以查找具有相同源 IP 和目标 IP 但协议不同的记录
 val df1Renamed = filteredDF.withColumnRenamed("frame.number", "frame_number1").withColumnRenamed("_ws.col.Protocol", "protocol1")
 val df2Renamed = filteredDF.withColumnRenamed("frame.number", "frame_number2").withColumnRenamed("_ws.col.Protocol", "protocol2")
