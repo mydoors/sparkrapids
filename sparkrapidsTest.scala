@@ -19,6 +19,7 @@ processWithRapids(data)
 val df = spark.read.format("csv").option("header", "true").load("/root/spark/data/packets.csv")
 df.printSchema()
 df.show()
+df.count()
 // Map 操作：Filter
 // 过滤出 ip.src 或 ip.dst 等于 "192.168.5.16" 的记录
 val filteredDF = df.filter($"ip.src" === "192.168.5.16" || $"ip.dst" === "192.168.5.16")
@@ -33,8 +34,7 @@ val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
   col("df1.protocol1") =!= col("df2.protocol2")
 )
 
-// 上面的代码中使用 col 函数来引用列时，对于包含点号的列名，我们使用了反引号。
-// 接下来，为了选择和显示结果，我们应该使用以下方式：
+
 
 joinedDF.select(
   col("df1.`ip.src`"), 
@@ -45,4 +45,4 @@ joinedDF.select(
   col("df2.protocol2")
 ).show()
 
-
+joinedDF.count()
