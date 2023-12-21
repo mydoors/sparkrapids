@@ -21,13 +21,9 @@ df.printSchema()
 df.show()
 df.count()
 // Map 操作：Filter
-// 过滤出 ip.src 或 ip.dst 等于 "192.168.5.160" 的记录
-// Map 操作：Filter
-// 过滤出 ip.src 或 ip.dst 等于 "192.168.5.160" 的记录
-// Map 操作：Filter
 // 过滤出 ip.src 或 ip.dst 等于 "192.168.5.162" 的记录
 val filteredDF = df.filter($"`ip.src`" === "192.168.5.162" || $"`ip.dst`" === "192.168.5.162")
-filteredDF.show()
+
 // 对同一个 DataFrame 执行自连接（self-join）以查找具有相同源 IP 和目标 IP 但协议不同的记录
 val df1Renamed = filteredDF.withColumnRenamed("frame.number", "frame_number1").withColumnRenamed("_ws.col.Protocol", "protocol1")
 val df2Renamed = filteredDF.withColumnRenamed("frame.number", "frame_number2").withColumnRenamed("_ws.col.Protocol", "protocol2")
@@ -36,10 +32,10 @@ val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
   $"df1.`ip.src`" === $"df2.`ip.src`" &&
   $"df1.`ip.dst`" === $"df2.`ip.dst`" &&
   $"df1.protocol1" =!= $"df2.protocol2" &&
-  $"df1.frame_number1" =!= $"df2.frame_number2" // 确保不是相同的记录
+  $"df1.frame_number1" < $"df2.frame_number2" // 确保不是相同的记录，并且 df1 的帧号小于 df2
 )
 
-// 显示结果
+// 显示结果，并去除重复行
 joinedDF.select(
   $"df1.frame_number1",
   $"df1.`ip.src`", 
@@ -48,7 +44,8 @@ joinedDF.select(
   $"df1.`tcp.dstport`", 
   $"df1.protocol1", 
   $"df2.protocol2"
-).show()
+).distinct().show()
+
 
 
 
