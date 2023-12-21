@@ -28,10 +28,11 @@ val df1Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol1")
 val df2Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol2")
 
 val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"), 
-  $"df1.ip.src" === $"df2.ip.src" &&
-  $"df1.ip.dst" === $"df2.ip.dst" &&
-  $"df1.protocol1" =!= $"df2.protocol2"
+  col("df1.`ip.src`") === col("df2.`ip.src`") &&
+  col("df1.`ip.dst`") === col("df2.`ip.dst`") &&
+  col("df1.protocol1") =!= col("df2.protocol2")
 )
+
 
 // 显示结果
 joinedDF.select("df1.ip.src", "df1.tcp.srcport", "df1.ip.dst", "df1.tcp.dstport", "df1.protocol1", "df2.protocol2").show()
