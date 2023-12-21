@@ -35,8 +35,8 @@ val df2Renamed = filteredDF.withColumnRenamed("frame.number", "frame_number2").w
 val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
   $"df1.`ip.src`" === $"df2.`ip.dst`" &&
   $"df1.`ip.dst`" === $"df2.`ip.src`" &&
-  $"df1.protocol1" =!= $"df2.protocol2" &&
-  $"df1.frame_number1" =!= $"df2.frame_number2" // 确保不是相同的记录
+  $"df1.protocol1" =!= $"df2.protocol2" 
+ 
 )
 
 // 显示结果
