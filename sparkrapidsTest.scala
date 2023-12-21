@@ -20,30 +20,20 @@ val df = spark.read.format("csv").option("header", "true").load("/root/spark/dat
 df.printSchema()
 df.show()
 // Map 操作：Filter
-val filteredDF = df.filter($"`ip.src`" === "192.168.5.162")
+// 过滤出 ip.src 或 ip.dst 等于 "192.168.5.16" 的记录
+val filteredDF = df.filter($"ip.src" === "192.168.5.16" || $"ip.dst" === "192.168.5.16")
 
-//对同一个 DataFrame 执行自连接（self-join）以查找具有相同源 IP 和目标 IP 但协议不同的记录
-
+// 对同一个 DataFrame 执行自连接（self-join）以查找具有相同源 IP 和目标 IP 但协议不同的记录
 val df1Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol1")
 val df2Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol2")
-val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
-  $"df1.`ip.src`" === $"df2.`p.src`" &&
-  $"df1.`ip.dst`" === $"df2.`ip.dst`" &&
+
+val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"), 
+  $"df1.ip.src" === $"df2.ip.src" &&
+  $"df1.ip.dst" === $"df2.ip.dst" &&
   $"df1.protocol1" =!= $"df2.protocol2"
 )
 
-
-joinedDF.show()
-
-val resultDF = joinedDF.select(
-  col("df1.`ip.src`"),        // 指定使用 df1 的 ip.src
-  col("df1.`tcp.srcport`"),   // 指定使用 df1 的 tcp.srcport
-  col("df1.`ip.dst`"),        // 指定使用 df1 的 ip.dst
-  col("df1.`tcp.dstport`"),   // 指定使用 df1 的 tcp.dstport
-  col("df1.`_ws.col.Protocol`")        // 已经重命名为 protocol1 的 _ws.col.Protocol
-)
+// 显示结果
+joinedDF.select("df1.ip.src", "df1.tcp.srcport", "df1.ip.dst", "df1.tcp.dstport", "df1.protocol1", "df2.protocol2").show()
 
 
-resultDF.show()
-//输出结果到文件
-resultDF.write.format("parquet").save("/root/spark/data/results.parquet")
