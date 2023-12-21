@@ -27,14 +27,22 @@ val filteredDF = df.filter($"ip.src" === "192.168.5.16" || $"ip.dst" === "192.16
 val df1Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol1")
 val df2Renamed = filteredDF.withColumnRenamed("_ws.col.Protocol", "protocol2")
 
-val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"), 
+val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
   col("df1.`ip.src`") === col("df2.`ip.src`") &&
   col("df1.`ip.dst`") === col("df2.`ip.dst`") &&
   col("df1.protocol1") =!= col("df2.protocol2")
 )
 
+// 上面的代码中使用 col 函数来引用列时，对于包含点号的列名，我们使用了反引号。
+// 接下来，为了选择和显示结果，我们应该使用以下方式：
 
-// 显示结果
-joinedDF.select("df1.ip.src", "df1.tcp.srcport", "df1.ip.dst", "df1.tcp.dstport", "df1.protocol1", "df2.protocol2").show()
+joinedDF.select(
+  col("df1.`ip.src`"), 
+  col("df1.`tcp.srcport`"), 
+  col("df1.`ip.dst`"), 
+  col("df1.`tcp.dstport`"), 
+  col("df1.protocol1"), 
+  col("df2.protocol2")
+).show()
 
 
