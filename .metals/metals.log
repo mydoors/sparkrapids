@@ -518,3 +518,13 @@ WARNING: Unmatched cancel notification for request id 34
 2023.12.22 11:46:41 INFO  Scala CLI: Downloaded https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.jar
 2023.12.22 11:46:42 INFO  Connected to Scala CLI server v1.1.0
 2023.12.22 11:46:43 INFO  compiling sparkrapids_bd2c96d2de (1 scala source)
+2023.12.22 11:46:50 INFO  compiling sparkrapids_bd2c96d2de (1 scala source)
+2023.12.22 11:46:52 INFO  time: compiled sparkrapids_bd2c96d2de in 1.31s
+2023.12.22 11:46:56 INFO  time: indexed workspace in 5.64s
+2023.12.22 11:47:56 INFO  compiling sparkrapids_bd2c96d2de (1 scala source)
+2023.12.22 11:47:58 INFO  time: compiled sparkrapids_bd2c96d2de in 1.54s
+2023.12.22 11:47:58 INFO  Scala CLI started for /Users/mydoors/code/sparkrapids
+2023.12.22 11:47:58 WARN  Build server is not auto-connectable.
+2023.12.22 11:47:58 WARN  no build tool detected in workspace '/Users/mydoors/code/sparkrapids'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.12.22 11:47:58 INFO  compiling sparkrapids_bd2c96d2de (1 scala source)
+2023.12.22 11:47:59 INFO  time: compiled sparkrapids_bd2c96d2de in 1.27s
