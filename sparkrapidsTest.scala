@@ -18,8 +18,7 @@ processWithRapids(data)
 
 val df = spark.read.format("csv").option("header", "true").load("/root/spark/data/network_data.csv")
 df.printSchema()
-df.show()
-df.count()
+
 // Map 操作：Filter
 // 过滤出 ip.src 或 ip.dst 等于 "192.168.5.162" 的记录
 val filteredDF = df.filter($"`ip.src`" === "192.168.5.162" || $"`ip.dst`" === "192.168.5.162")
@@ -36,7 +35,7 @@ val joinedDF = df1Renamed.alias("df1").join(df2Renamed.alias("df2"),
 )
 
 // 显示结果，并去除重复行
-joinedDF.select(
+val resultsDF = joinedDF.select(
   $"df1.frame_number1",
   $"df1.`ip.src`", 
   $"df1.`tcp.srcport`", 
@@ -44,9 +43,12 @@ joinedDF.select(
   $"df1.`tcp.dstport`", 
   $"df1.protocol1", 
   $"df2.protocol2"
-).distinct().show()
+).distinct()
+
+resultsDF.write
+  .option("header", "true") // 包含头部
+  .option("sep", ",")       // 指定分隔符，默认是逗号
+  .csv("/root/spark/data/results.csv") // 指定输出目录
 
 
-
-
-joinedDF.count()
+//joinedDF.count()
