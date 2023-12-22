@@ -49,7 +49,7 @@ resultsDF.coalesce(1)
   .write
   .option("header", "true") // 包含头部
   .option("sep", ",")       // 指定分隔符，默认是逗号
-  .csv("/root/spark/data/results.csv") // 指定输出目录
+  .csv("/root/spark/data/results") // 指定输出目录
 
 
 //joinedDF.count()
