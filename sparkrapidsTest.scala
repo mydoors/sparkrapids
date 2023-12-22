@@ -15,7 +15,7 @@ val data = Seq("hello", "world", "this", "is", "rapids").toDF("value")
 // 调用函数处理 DataFrame
 processWithRapids(data)
 
-
+// 读入数据集
 val df = spark.read.format("csv").option("header", "true").load("/root/spark/data/network_data.csv")
 df.printSchema()
 
