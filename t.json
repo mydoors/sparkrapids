@@ -1,0 +1,130 @@
+{
+  "network": {
+    "frame": {
+      "number": "19",
+      "on_wire_bytes": "124",
+      "captured_bytes": "124",
+      "interface": {
+        "id": "0",
+        "name": "en1",
+        "description": "Wi-Fi"
+      },
+      "encapsulation_type": "Ethernet (1)",
+      "arrival_time": {
+        "local": "Jan  3, 2024 14:49:41.740852000 CST",
+        "utc": "Jan  3, 2024 06:49:41.740852000 UTC",
+        "epoch": "1704264581.740852000"
+      },
+      "time_shift": "0.000000000",
+      "time_since_first_frame": "1.077259000",
+      "time_delta_previous_frame": "0.013875000",
+      "protocols": ["eth", "ip", "udp", "dns"],
+      "coloring_rule": {
+        "name": "UDP",
+        "string": "udp"
+      }
+    },
+    "ethernet": {
+      "source_mac": "48:5f:08:2b:18:22",
+      "destination_mac": "5c:1b:f4:a0:08:a4",
+      "ethertype": "IPv4"
+    },
+    "ip": {
+      "version": "4",
+      "header_length": "20",
+      "tos": "0x00",
+      "total_length": "110",
+      "identification": "0x0000",
+      "flags": "0x0",
+      "fragment_offset": "0",
+      "ttl": "151",
+      "protocol": "UDP",
+      "header_checksum": "0x7d88",
+      "source_ip": "114.114.114.114",
+      "destination_ip": "192.168.0.106"
+    },
+    "udp": {
+      "source_port": "53",
+      "destination_port": "51499",
+      "length": "90",
+      "checksum": "0x7e70"
+    }
+  },
+  "dns_records": [
+    {
+      "query": {
+        "transaction_id": "0x6073",
+        "flags": "0x8180",
+        "opcode": "Standard query",
+        "response": true,
+        "authoritative": false,
+        "truncated": false,
+        "recursion_desired": true,
+        "recursion_available": true,
+        "z_reserved": "0",
+        "answer_authenticated": false,
+        "non_authenticated_data": "Unacceptable",
+        "reply_code": "No error",
+        "questions_count": 1,
+        "answer_rrs_count": 2,
+        "authority_rrs_count": 0,
+        "additional_rrs_count": 0,
+        "queries": [
+          {
+            "name": "hk1.iplcnetwork.com",
+            "type": "A",
+            "class": "IN"
+          }
+        ],
+        "answers": [
+          {
+            "name": "hk1.iplcnetwork.com",
+            "type": "CNAME",
+            "class": "IN",
+            "ttl": 38,
+            "cname": "gcm.hiccupx.xyz"
+          },
+          {
+            "name": "gcm.hiccupx.xyz",
+            "type": "A",
+            "class": "IN",
+            "ttl": 38,
+            "address": "36.139.110.172"
+          }
+        ]
+      },
+      "response": {
+        "id": "dnsIdValue",
+        "name": "example.com",
+        "ttl": 300,
+        "QR": "Response",
+        "type": "A",
+        "rCode": "NoError",
+        "section": "Answer",
+        "dnsA": "93.184.216.34",
+        "dnsAAAA": null,
+        "dnsCNAME": null,
+        "dnsMX": "mail.example.com",
+        "dnsNS": "ns1.example.com",
+        "dnsTXT": "v=spf1 include:_spf.example.com ~all",
+        "dnsSOA": {
+          "mname": "ns1.example.com",
+          "rname": "hostmaster.example.com",
+          "serial": 2024010301,
+          "refresh": 7200,
+          "retry": 900,
+          "expire": 1209600,
+          "minimum": 3600
+        },
+        "dnsSRV": {
+          "target": "service.example.com",
+          "port": 8080,
+          "priority": 10,
+          "weight": 10
+        },
+        "dnsPTR": "host.example.com"
+      }
+    }
+    // Additional DNS records would follow here...
+  ]
+}
