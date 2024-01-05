@@ -835,3 +835,6 @@ where this = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
 
 2024.01.05 12:17:03 WARN  Using indexes to guess the definition of networkFields
 2024.01.05 12:17:04 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 14:08:14 WARN  Could not find semantic tokens for: file:///Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 14:08:21 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 14:08:37 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
