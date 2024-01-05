@@ -728,3 +728,40 @@ INFO: Unsupported notification method: $/setTrace
 2024.01.04 17:37:22 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
 2024.01.04 17:37:34 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
 2024.01.05 09:51:50 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 10:04:35 ERROR Failed to tokenize input for semantic tokens for /Users/mydoors/code/sparkrapids/dnsRapids.scala
+scala.meta.tokenizers.TokenizeException: <input>:56: error: illegal character '\uff08'
+/ 转换为Parquet格式（在CPU模式下）
+              ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchOther$1(LegacyScanner.scala:469)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:474)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+Jan 05, 2024 10:04:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 281
+2024.01.05 10:05:11 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 10:05:38 WARN  Could not find semantic tokens for: file:///Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 10:29:40 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 10:30:00 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 10:30:39 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 10:31:04 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
