@@ -79,13 +79,13 @@ val jsonPath = "/root/spark/data/dns_records.json"
 val rawDf = spark.read.json(jsonPath)
 
 // 将DataFrame转换为Parquet格式
-rawDf.overwrite.parquet("/root/spark/data/dns_records.parquet")
+//rawDf.overwrite.parquet("/root/spark/data/dns_records.parquet")
 
 // 使用GPU加速读取Parquet文件
-val gpuDf = spark.read.parquet("/root/spark/data/dns_records.parquet")
+// val gpuDf = spark.read.parquet("/root/spark/data/dns_records.parquet")
 
 // 应用预处理函数
-val preprocessedDf = Preprocess(gpuDf)
+val preprocessedDf = Preprocess(rawDf)
 
 // 应用GetDnsInfos函数处理数据
 val dnsInfosDf = GetDnsInfos(preprocessedDf)
