@@ -19,10 +19,19 @@ def Preprocess(df: DataFrame): DataFrame = {
 
 // GetDnsInfos函数
 def GetDnsInfos(df: DataFrame): DataFrame = {
-  var retdf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
+   var retdf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
     .select((networkFields ++ Array("dnsRecordList")).map(col): _*)
-    .select($"*", $"dnsRecordList.query.*", $"dnsRecordList.response.*")
-    .drop("dnsRecordList")
+
+  // 展开dnsRecordList并选择query和response的子字段
+  retdf = retdf.withColumn("record", explode_outer($"dnsRecordList"))
+    .select($"*", 
+            $"record.query.transaction_id", 
+            $"record.query.opcode", 
+            $"record.response.id", 
+            $"record.response.flags",
+            $"record.query.*", 
+            $"record.response.*")
+    .drop("dnsRecordList", "record", "query", "response")
 
   // 从展开的记录中提取信息
   retdf = retdf
