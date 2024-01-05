@@ -50,7 +50,7 @@ def GetDnsInfos(): DataFrame = {
   retdf = retdf.select((fiveTuples ++ dnsInfos ++ statInfos).map(col(_)): _*)
 }
 // 读取JSON数据
-val jsonPath = "path_to_your_json_file.json" // 替换为你的JSON文件路径
+val jsonPath = "/root/spark/data/dns_records.json" // 替换为你的JSON文件路径
 val rawDf = spark.read.json(jsonPath)
 
 // 应用预处理函数
