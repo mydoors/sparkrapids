@@ -1,0 +1,12 @@
+import org.apache.spark.sql.functions._
+
+// 预处理函数
+def Preprocess(df: org.apache.spark.sql.DataFrame): org.apache.spark.sql.DataFrame = {
+  // 添加silkAppLabel列，这里假设所有记录的label为53
+  val processedDf = df.withColumn("silkAppLabel", lit(53))
+    .withColumn("sourceIpAddress", $"network.ip.source_ip")
+    .withColumn("destinationIpAddress", $"network.ip.destination_ip")
+    .withColumn("dnsRecordList", $"dns_records")
+
+  processedDf
+}

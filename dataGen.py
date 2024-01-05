@@ -112,4 +112,4 @@ def generate_dns_records(num_records, filename):
             json.dump(record, f)
             f.write('\n')
 
-generate_dns_records(10000, 'dns_records.json')
+generate_dns_records(10, 'dns_records.json')
