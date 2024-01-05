@@ -849,3 +849,10 @@ where this = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
 Jan 05, 2024 2:24:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 1013
 2024.01.05 14:38:12 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+Jan 05, 2024 3:23:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1070
+Jan 05, 2024 3:57:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1091
+2024.01.05 16:02:26 WARN  Could not find semantic tokens for: file:///Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 16:11:37 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 16:11:54 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
