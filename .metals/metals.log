@@ -770,3 +770,68 @@ Jan 05, 2024 12:00:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancella
 WARNING: Unmatched cancel notification for request id 624
 2024.01.05 12:02:08 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
 2024.01.05 12:02:22 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+Jan 05, 2024 12:06:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying parentCheckOk.&&(org.scalameta.`package`.debug(this, parentPrefix, destination))
+found that parentCheckOk is false
+where TermRepeatedImpl = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
+where destination = fun
+where parentCheckOk = false
+where parentPrefix = Term.Apply
+where this = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
+java.util.concurrent.CompletionException: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying parentCheckOk.&&(org.scalameta.`package`.debug(this, parentPrefix, destination))
+found that parentCheckOk is false
+where TermRepeatedImpl = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
+where destination = fun
+where parentCheckOk = false
+where parentPrefix = Term.Apply
+where this = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying parentCheckOk.&&(org.scalameta.`package`.debug(this, parentPrefix, destination))
+found that parentCheckOk is false
+where TermRepeatedImpl = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
+where destination = fun
+where parentCheckOk = false
+where parentPrefix = Term.Apply
+where this = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
+	at org.scalameta.invariants.InvariantFailedException$.raise(Exceptions.scala:19)
+	at scala.meta.Term$Repeated$TermRepeatedImpl.checkParent$8(Trees.scala:240)
+	at scala.meta.Term$Repeated$TermRepeatedImpl.privateCopy(Trees.scala:241)
+	at scala.meta.Term$Apply$.apply(Trees.scala:130)
+	at scala.meta.Term$Apply$.apply(Trees.scala:130)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.processPatAndNextQual(FlatMapToForComprehensionCodeAction.scala:313)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$extractChainedForYield$1(FlatMapToForComprehensionCodeAction.scala:603)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.extractChainedForYield(FlatMapToForComprehensionCodeAction.scala:601)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$processFilter$1(FlatMapToForComprehensionCodeAction.scala:473)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.processFilter(FlatMapToForComprehensionCodeAction.scala:434)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.extractChainedForYield(FlatMapToForComprehensionCodeAction.scala:646)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$codeActionWithApply$1(FlatMapToForComprehensionCodeAction.scala:187)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.codeActionWithApply(FlatMapToForComprehensionCodeAction.scala:179)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$5(FlatMapToForComprehensionCodeAction.scala:61)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$3(FlatMapToForComprehensionCodeAction.scala:53)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$2(FlatMapToForComprehensionCodeAction.scala:52)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$1(FlatMapToForComprehensionCodeAction.scala:51)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2024.01.05 12:17:03 WARN  Using indexes to guess the definition of networkFields
+2024.01.05 12:17:04 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
