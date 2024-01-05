@@ -843,3 +843,8 @@ where this = (fiveTuples ++ Array("dnsRecordList") ++ statInfos).map(col(_)): _*
 2024.01.05 14:14:02 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
 2024.01.05 14:18:09 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
 2024.01.05 14:18:15 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 14:23:21 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 14:23:44 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 14:24:05 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+Jan 05, 2024 2:24:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1013

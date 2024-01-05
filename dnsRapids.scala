@@ -19,19 +19,23 @@ def Preprocess(df: DataFrame): DataFrame = {
 
 // GetDnsInfos函数
 def GetDnsInfos(df: DataFrame): DataFrame = {
-   var retdf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
+    var filteredDf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
     .select((networkFields ++ Array("dnsRecordList")).map(col): _*)
 
-  // 展开dnsRecordList并选择query和response的子字段
-  retdf = retdf.withColumn("record", explode_outer($"dnsRecordList"))
-    .select($"*", 
-            $"record.query.transaction_id", 
-            $"record.query.opcode", 
-            $"record.response.id", 
-            $"record.response.flags",
-            $"record.query.*", 
-            $"record.response.*")
-    .drop("dnsRecordList", "record", "query", "response")
+  // 展开dnsRecords并选择query和response的子字段
+    val expandedDf = filteredDf
+    .select(
+      col("network.frame.number").as("number"),
+      col("network.frame.protocols").as("protocols"),
+      col("network.ethernet.source_mac").as("source_mac"),
+      col("network.ethernet.destination_mac").as("destination_mac"),
+      col("network.ip.source_ip").as("source_ip"),
+      col("network.ip.destination_ip").as("destination_ip"),
+      col("network.udp.source_port").as("source_port"),
+      col("network.udp.destination_port").as("destination_port"),
+      col("dnsRecordsExploded.query.*"),
+      col("dnsRecordsExploded.response.*")
+    )
 
   // 从展开的记录中提取信息
   retdf = retdf
