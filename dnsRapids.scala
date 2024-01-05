@@ -20,7 +20,7 @@ def Preprocess(df: DataFrame): DataFrame = {
 // GetDnsInfos函数
 def GetDnsInfos(df: DataFrame): DataFrame = {
     var filteredDf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
-    .select((networkFields ++ Array("dnsRecordList")).map(col): _*)
+    //.select((networkFields ++ Array("dnsRecordList")).map(col): _*)
     filteredDf.show(false)
     return filteredDf
 }

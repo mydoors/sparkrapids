@@ -984,3 +984,5 @@ scala.meta.tokenizers.TokenizeException: <input>:17: error: illegal character '\
 	at java.lang.Thread.run(Thread.java:829)
 
 2024.01.05 16:33:52 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 16:37:08 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
+2024.01.05 16:37:30 WARN  no build target for: /Users/mydoors/code/sparkrapids/dnsRapids.scala
