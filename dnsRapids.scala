@@ -21,8 +21,9 @@ def Preprocess(df: DataFrame): DataFrame = {
 def GetDnsInfos(df: DataFrame): DataFrame = {
     var filteredDf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
     .select((networkFields ++ Array("dnsRecordList")).map(col): _*)
-    filteredDF.show(false)
-    filteredDF
+    filteredDf.show(false)
+    return filteredDf
+}
 //   // 展开dnsRecords并选择query和response的子字段
 //     val expandedDf = filteredDf
 //     .select(
@@ -73,7 +74,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
 //   // 选择相关列
 //   retdf = retdf.select((networkFields ++ Array("id", "name", "ttl", "QR", "type", "rCode", "section", "A", "AAAA", "CNAME", "MX", "NS", "TXT", "SOA", "SRV", "PTR")).map(col): _*)
 //   retdf
-}
+
 
 // 读取JSON数据并转换为DataFrame
 val jsonPath = "/root/spark/data/dns_records.json"
