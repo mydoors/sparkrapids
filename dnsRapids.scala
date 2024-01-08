@@ -80,7 +80,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
 // 读取JSON数据并转换为DataFrame
 val jsonPath = "/root/spark/data/dns_records.json"
 val rawDf = spark.read.json(jsonPath)
-
+rawDf.show()
 // 将DataFrame转换为Parquet格式
 //rawDf.write.mode("overwrite").parquet("/root/spark/data/dns_records.parquet")
 
