@@ -14,7 +14,7 @@ def Preprocess(df: DataFrame): DataFrame = {
   df.withColumn("silkAppLabel", lit(53))
     .withColumn("sourceIpAddress", $"network.ip.source_ip")
     .withColumn("destinationIpAddress", $"network.ip.destination_ip")
-    .withColumn("dnsRecordList", $"dns_record")
+    .withColumn("dnsRecordList", explode($"dns_records"))
 
 }
 
@@ -35,8 +35,8 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
       col("network.ip.destination_ip").as("destination_ip"),
       col("network.udp.source_port").as("source_port"),
       col("network.udp.destination_port").as("destination_port"),
-      col("dnsRecord.query.*"),
-      col("dnsRecord.response.*")
+      col("dnsRecordsExploded.query.*"),
+      col("dnsRecordsExploded.response.*")
     )
 
   // 从展开的记录中提取信息

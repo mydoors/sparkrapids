@@ -109,17 +109,23 @@ def generate_network_info():
     }
 
 def generate_json_record():
+    num_dns_records = random.randint(1, 5)  # 每个记录包含1到5个DNS记录
+    dns_records = [generate_dns_record() for _ in range(num_dns_records)]
+    network_info = generate_network_info()
+
     return {
-        "network": generate_network_info(),
-        "dns_record": generate_dns_record()
+        "network": network_info,
+        "dns_records": dns_records
     }
 
 def main():
-    num_records = 10  # 可以调整为所需的数量
+    num_records = 10  # 总共生成10个独立的JSON记录
+    records = [generate_json_record() for _ in range(num_records)]
+
     with open("dns_records.json", "w") as file:
-        for _ in range(num_records):
-            json_record = generate_json_record()
-            file.write(json.dumps(json_record) + "\n")
+        for record in records:
+            json.dump(record, file)
+            file.write("\n")  # 每个JSON记录后面加一个换行符
 
 if __name__ == "__main__":
     main()

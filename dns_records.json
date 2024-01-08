@@ -1,10 +1,277 @@
-{"network": {"frame": {"number": "6950", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038329", "utc": "2024-01-08T08:27:42.038344", "epoch": "1704702462.038346"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.249.228", "destination_ip": "192.168.132.84"}, "udp": {"source_port": "53", "destination_port": "46670", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0x195a", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "TXT", "name": "example83.com", "ttl": 4013}]}, "response": {"id": "0x8f49", "name": "example154.com", "ttl": 972, "QR": "Response", "type": "TXT", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": "v=spf1 include:_spf.example.com ~all", "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}}
-{"network": {"frame": {"number": "3468", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038409", "utc": "2024-01-08T08:27:42.038411", "epoch": "1704702462.038411"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.179.80", "destination_ip": "192.168.175.154"}, "udp": {"source_port": "53", "destination_port": "3205", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0xec0e", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "AAAA", "name": "example40.com", "ttl": 3187}]}, "response": {"id": "0x7243", "name": "example117.com", "ttl": 1882, "QR": "Response", "type": "AAAA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": "b908:995c:a2cc:6009:bc75:e41d:9e6e:ccb1", "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}}
-{"network": {"frame": {"number": "1827", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038450", "utc": "2024-01-08T08:27:42.038451", "epoch": "1704702462.038452"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.60.127", "destination_ip": "192.168.137.5"}, "udp": {"source_port": "53", "destination_port": "55846", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0xd090", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SRV", "name": "example51.com", "ttl": 3585}]}, "response": {"id": "0x9", "name": "example107.com", "ttl": 2176, "QR": "Response", "type": "SRV", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": {"target": "service3.example.com", "port": 5313, "priority": 7, "weight": 9}, "dnsPTR": null}}}
-{"network": {"frame": {"number": "9845", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038481", "utc": "2024-01-08T08:27:42.038482", "epoch": "1704702462.038483"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.19.90", "destination_ip": "192.168.63.29"}, "udp": {"source_port": "53", "destination_port": "44018", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0xb735", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example31.com", "ttl": 122}]}, "response": {"id": "0xd361", "name": "example128.com", "ttl": 2498, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns2.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}}
-{"network": {"frame": {"number": "650", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038507", "utc": "2024-01-08T08:27:42.038508", "epoch": "1704702462.038509"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.214.81", "destination_ip": "192.168.76.161"}, "udp": {"source_port": "53", "destination_port": "15051", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0x4f3", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "A", "name": "example51.com", "ttl": 2152}]}, "response": {"id": "0xc2a2", "name": "example171.com", "ttl": 304, "QR": "Response", "type": "A", "rCode": "NoError", "section": "Answer", "dnsA": "192.168.16.57", "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}}
-{"network": {"frame": {"number": "6754", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038533", "utc": "2024-01-08T08:27:42.038534", "epoch": "1704702462.038534"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.39.73", "destination_ip": "192.168.15.88"}, "udp": {"source_port": "53", "destination_port": "10550", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0xace2", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SOA", "name": "example52.com", "ttl": 2470}]}, "response": {"id": "0xc1f8", "name": "example198.com", "ttl": 771, "QR": "Response", "type": "SOA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": {"mname": "ns3.example.com", "rname": "hostmaster.example.com", "serial": 4239733, "refresh": 16543, "retry": 4807, "expire": 126747, "minimum": 4894}, "dnsSRV": null, "dnsPTR": null}}}
-{"network": {"frame": {"number": "5472", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038601", "utc": "2024-01-08T08:27:42.038603", "epoch": "1704702462.038604"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.198.147", "destination_ip": "192.168.21.169"}, "udp": {"source_port": "53", "destination_port": "47114", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0x595d", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "CNAME", "name": "example87.com", "ttl": 419}]}, "response": {"id": "0x15da", "name": "example192.com", "ttl": 4700, "QR": "Response", "type": "CNAME", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": "cname36.example.com", "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}}
-{"network": {"frame": {"number": "4443", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038636", "utc": "2024-01-08T08:27:42.038637", "epoch": "1704702462.038638"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.236.247", "destination_ip": "192.168.96.41"}, "udp": {"source_port": "53", "destination_port": "47302", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0x5fa2", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SOA", "name": "example9.com", "ttl": 1979}]}, "response": {"id": "0x4adc", "name": "example138.com", "ttl": 4898, "QR": "Response", "type": "SOA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": {"mname": "ns3.example.com", "rname": "hostmaster.example.com", "serial": 3201626, "refresh": 19005, "retry": 3893, "expire": 136830, "minimum": 6527}, "dnsSRV": null, "dnsPTR": null}}}
-{"network": {"frame": {"number": "7230", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038667", "utc": "2024-01-08T08:27:42.038668", "epoch": "1704702462.038668"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.10.239", "destination_ip": "192.168.20.160"}, "udp": {"source_port": "53", "destination_port": "45000", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0x6d5", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "PTR", "name": "example13.com", "ttl": 3467}]}, "response": {"id": "0x1ba", "name": "example172.com", "ttl": 2066, "QR": "Response", "type": "PTR", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": "host45.example.com"}}}
-{"network": {"frame": {"number": "6110", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:27:42.038691", "utc": "2024-01-08T08:27:42.038692", "epoch": "1704702462.038693"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.72.236", "destination_ip": "192.168.134.72"}, "udp": {"source_port": "53", "destination_port": "20629", "length": "90", "checksum": "0x7e70"}}, "dns_record": {"query": {"transaction_id": "0xcb73", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SOA", "name": "example53.com", "ttl": 2255}]}, "response": {"id": "0x7996", "name": "example145.com", "ttl": 2866, "QR": "Response", "type": "SOA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": {"mname": "ns3.example.com", "rname": "hostmaster.example.com", "serial": 6501860, "refresh": 19961, "retry": 2994, "expire": 120965, "minimum": 6925}, "dnsSRV": null, "dnsPTR": null}}}
+{
+    "network": {
+        "frame": {
+            "number": "2272",
+            "on_wire_bytes": "124",
+            "captured_bytes": "124",
+            "interface": {
+                "id": "0",
+                "name": "en1",
+                "description": "Wi-Fi"
+            },
+            "encapsulation_type": "Ethernet (1)",
+            "arrival_time": {
+                "local": "2024-01-08T16:41:57.200077",
+                "utc": "2024-01-08T08:41:57.200091",
+                "epoch": "1704703317.200093"
+            },
+            "protocols": [
+                "eth",
+                "ip",
+                "udp",
+                "dns"
+            ]
+        },
+        "ethernet": {
+            "source_mac": "48:5f:08:2b:18:22",
+            "destination_mac": "5c:1b:f4:a0:08:a4",
+            "ethertype": "IPv4"
+        },
+        "ip": {
+            "version": "4",
+            "header_length": "20",
+            "tos": "0x00",
+            "total_length": "110",
+            "identification": "0x0000",
+            "flags": "0x0",
+            "fragment_offset": "0",
+            "ttl": "151",
+            "protocol": "UDP",
+            "header_checksum": "0x7d88",
+            "source_ip": "192.168.33.243",
+            "destination_ip": "192.168.211.5"
+        },
+        "udp": {
+            "source_port": "53",
+            "destination_port": "19237",
+            "length": "90",
+            "checksum": "0x7e70"
+        }
+    },
+    "dns_records": [
+        {
+            "query": {
+                "transaction_id": "0x63cf",
+                "flags": "0x0100",
+                "opcode": "Standard query",
+                "response": false,
+                "authoritative": false,
+                "truncated": false,
+                "recursion_desired": true,
+                "recursion_available": false,
+                "z_reserved": "0",
+                "answer_authenticated": false,
+                "non_authenticated_data": "Unacceptable",
+                "reply_code": "No error",
+                "questions_count": 1,
+                "queries": [
+                    {
+                        "type": "PTR",
+                        "name": "example81.com",
+                        "ttl": 346
+                    }
+                ]
+            },
+            "response": {
+                "id": "0x4939",
+                "name": "example191.com",
+                "ttl": 842,
+                "QR": "Response",
+                "type": "PTR",
+                "rCode": "NoError",
+                "section": "Answer",
+                "dnsA": null,
+                "dnsAAAA": null,
+                "dnsCNAME": null,
+                "dnsMX": null,
+                "dnsNS": null,
+                "dnsTXT": null,
+                "dnsSOA": null,
+                "dnsSRV": null,
+                "dnsPTR": "host57.example.com"
+            }
+        },
+        {
+            "query": {
+                "transaction_id": "0x7661",
+                "flags": "0x0100",
+                "opcode": "Standard query",
+                "response": false,
+                "authoritative": false,
+                "truncated": false,
+                "recursion_desired": true,
+                "recursion_available": false,
+                "z_reserved": "0",
+                "answer_authenticated": false,
+                "non_authenticated_data": "Unacceptable",
+                "reply_code": "No error",
+                "questions_count": 1,
+                "queries": [
+                    {
+                        "type": "PTR",
+                        "name": "example68.com",
+                        "ttl": 1059
+                    }
+                ]
+            },
+            "response": {
+                "id": "0xab2b",
+                "name": "example192.com",
+                "ttl": 1866,
+                "QR": "Response",
+                "type": "PTR",
+                "rCode": "NoError",
+                "section": "Answer",
+                "dnsA": null,
+                "dnsAAAA": null,
+                "dnsCNAME": null,
+                "dnsMX": null,
+                "dnsNS": null,
+                "dnsTXT": null,
+                "dnsSOA": null,
+                "dnsSRV": null,
+                "dnsPTR": "host94.example.com"
+            }
+        },
+        {
+            "query": {
+                "transaction_id": "0x480d",
+                "flags": "0x0100",
+                "opcode": "Standard query",
+                "response": false,
+                "authoritative": false,
+                "truncated": false,
+                "recursion_desired": true,
+                "recursion_available": false,
+                "z_reserved": "0",
+                "answer_authenticated": false,
+                "non_authenticated_data": "Unacceptable",
+                "reply_code": "No error",
+                "questions_count": 1,
+                "queries": [
+                    {
+                        "type": "MX",
+                        "name": "example23.com",
+                        "ttl": 1055
+                    }
+                ]
+            },
+            "response": {
+                "id": "0x60d7",
+                "name": "example186.com",
+                "ttl": 1646,
+                "QR": "Response",
+                "type": "MX",
+                "rCode": "NoError",
+                "section": "Answer",
+                "dnsA": null,
+                "dnsAAAA": null,
+                "dnsCNAME": null,
+                "dnsMX": "mail38.example.com",
+                "dnsNS": null,
+                "dnsTXT": null,
+                "dnsSOA": null,
+                "dnsSRV": null,
+                "dnsPTR": null
+            }
+        },
+        {
+            "query": {
+                "transaction_id": "0x1d70",
+                "flags": "0x0100",
+                "opcode": "Standard query",
+                "response": false,
+                "authoritative": false,
+                "truncated": false,
+                "recursion_desired": true,
+                "recursion_available": false,
+                "z_reserved": "0",
+                "answer_authenticated": false,
+                "non_authenticated_data": "Unacceptable",
+                "reply_code": "No error",
+                "questions_count": 1,
+                "queries": [
+                    {
+                        "type": "SRV",
+                        "name": "example25.com",
+                        "ttl": 2489
+                    }
+                ]
+            },
+            "response": {
+                "id": "0xc0f2",
+                "name": "example185.com",
+                "ttl": 3330,
+                "QR": "Response",
+                "type": "SRV",
+                "rCode": "NoError",
+                "section": "Answer",
+                "dnsA": null,
+                "dnsAAAA": null,
+                "dnsCNAME": null,
+                "dnsMX": null,
+                "dnsNS": null,
+                "dnsTXT": null,
+                "dnsSOA": null,
+                "dnsSRV": {
+                    "target": "service1.example.com",
+                    "port": 3509,
+                    "priority": 4,
+                    "weight": 1
+                },
+                "dnsPTR": null
+            }
+        },
+        {
+            "query": {
+                "transaction_id": "0x94cb",
+                "flags": "0x0100",
+                "opcode": "Standard query",
+                "response": false,
+                "authoritative": false,
+                "truncated": false,
+                "recursion_desired": true,
+                "recursion_available": false,
+                "z_reserved": "0",
+                "answer_authenticated": false,
+                "non_authenticated_data": "Unacceptable",
+                "reply_code": "No error",
+                "questions_count": 1,
+                "queries": [
+                    {
+                        "type": "TXT",
+                        "name": "example45.com",
+                        "ttl": 1900
+                    }
+                ]
+            },
+            "response": {
+                "id": "0xd09d",
+                "name": "example117.com",
+                "ttl": 2972,
+                "QR": "Response",
+                "type": "TXT",
+                "rCode": "NoError",
+                "section": "Answer",
+                "dnsA": null,
+                "dnsAAAA": null,
+                "dnsCNAME": null,
+                "dnsMX": null,
+                "dnsNS": null,
+                "dnsTXT": "v=spf1 include:_spf.example.com ~all",
+                "dnsSOA": null,
+                "dnsSRV": null,
+                "dnsPTR": null
+            }
+        }
+    ]
+}
+{"network": {"frame": {"number": "810", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200131", "utc": "2024-01-08T08:41:57.200132", "epoch": "1704703317.200133"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.203.164", "destination_ip": "192.168.147.46"}, "udp": {"source_port": "53", "destination_port": "50460", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0xf60d", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SRV", "name": "example9.com", "ttl": 1963}]}, "response": {"id": "0x491a", "name": "example126.com", "ttl": 1632, "QR": "Response", "type": "SRV", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": {"target": "service1.example.com", "port": 3103, "priority": 9, "weight": 4}, "dnsPTR": null}}, {"query": {"transaction_id": "0xfabb", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SOA", "name": "example81.com", "ttl": 4114}]}, "response": {"id": "0x4275", "name": "example110.com", "ttl": 3499, "QR": "Response", "type": "SOA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": {"mname": "ns2.example.com", "rname": "hostmaster.example.com", "serial": 1871834, "refresh": 17586, "retry": 4031, "expire": 152589, "minimum": 6886}, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x3063", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "TXT", "name": "example59.com", "ttl": 4631}]}, "response": {"id": "0x37a8", "name": "example149.com", "ttl": 3807, "QR": "Response", "type": "TXT", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": "v=spf1 include:_spf.example.com ~all", "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x51ef", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example98.com", "ttl": 4728}]}, "response": {"id": "0xaeb2", "name": "example168.com", "ttl": 2093, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns2.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "8158", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200166", "utc": "2024-01-08T08:41:57.200168", "epoch": "1704703317.200168"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.131.162", "destination_ip": "192.168.156.118"}, "udp": {"source_port": "53", "destination_port": "22820", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0x28c1", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SOA", "name": "example47.com", "ttl": 4127}]}, "response": {"id": "0xfe7", "name": "example187.com", "ttl": 658, "QR": "Response", "type": "SOA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": {"mname": "ns3.example.com", "rname": "hostmaster.example.com", "serial": 6867125, "refresh": 11945, "retry": 3118, "expire": 126606, "minimum": 5849}, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x7582", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SOA", "name": "example10.com", "ttl": 4974}]}, "response": {"id": "0x23ed", "name": "example117.com", "ttl": 1255, "QR": "Response", "type": "SOA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": {"mname": "ns3.example.com", "rname": "hostmaster.example.com", "serial": 6013033, "refresh": 16402, "retry": 3314, "expire": 170015, "minimum": 5120}, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x418f", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "AAAA", "name": "example1.com", "ttl": 3326}]}, "response": {"id": "0xa781", "name": "example150.com", "ttl": 1743, "QR": "Response", "type": "AAAA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": "3cc3:e4e9:fb17:5b50:d845:9d65:5bee:5ad5", "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "2934", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200204", "utc": "2024-01-08T08:41:57.200205", "epoch": "1704703317.200206"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.10.78", "destination_ip": "192.168.194.180"}, "udp": {"source_port": "53", "destination_port": "37115", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0xa476", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "AAAA", "name": "example58.com", "ttl": 4333}]}, "response": {"id": "0xb011", "name": "example172.com", "ttl": 738, "QR": "Response", "type": "AAAA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": "dc39:8749:2e79:1423:29d:2cb9:9ba5:d6f1", "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0xa1c6", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SOA", "name": "example28.com", "ttl": 4048}]}, "response": {"id": "0x5a1d", "name": "example124.com", "ttl": 2258, "QR": "Response", "type": "SOA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": {"mname": "ns3.example.com", "rname": "hostmaster.example.com", "serial": 3065621, "refresh": 15704, "retry": 2768, "expire": 190585, "minimum": 4608}, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x4235", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "SRV", "name": "example44.com", "ttl": 3010}]}, "response": {"id": "0x79ef", "name": "example101.com", "ttl": 4444, "QR": "Response", "type": "SRV", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": {"target": "service1.example.com", "port": 3353, "priority": 6, "weight": 8}, "dnsPTR": null}}, {"query": {"transaction_id": "0x6872", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "MX", "name": "example6.com", "ttl": 3769}]}, "response": {"id": "0xacbd", "name": "example159.com", "ttl": 426, "QR": "Response", "type": "MX", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": "mail74.example.com", "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x7e20", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "TXT", "name": "example82.com", "ttl": 4509}]}, "response": {"id": "0xec11", "name": "example161.com", "ttl": 255, "QR": "Response", "type": "TXT", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": "v=spf1 include:_spf.example.com ~all", "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "5129", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200217", "utc": "2024-01-08T08:41:57.200218", "epoch": "1704703317.200219"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.123.38", "destination_ip": "192.168.190.129"}, "udp": {"source_port": "53", "destination_port": "17600", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0x52fb", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example44.com", "ttl": 299}]}, "response": {"id": "0x3487", "name": "example185.com", "ttl": 4722, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns1.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "1567", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200246", "utc": "2024-01-08T08:41:57.200247", "epoch": "1704703317.200248"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.131.204", "destination_ip": "192.168.211.47"}, "udp": {"source_port": "53", "destination_port": "1338", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0x4096", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "PTR", "name": "example40.com", "ttl": 3547}]}, "response": {"id": "0xf23c", "name": "example107.com", "ttl": 3013, "QR": "Response", "type": "PTR", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": "host83.example.com"}}, {"query": {"transaction_id": "0x6beb", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "CNAME", "name": "example93.com", "ttl": 1618}]}, "response": {"id": "0xf82", "name": "example166.com", "ttl": 1908, "QR": "Response", "type": "CNAME", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": "cname84.example.com", "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x50cf", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "AAAA", "name": "example20.com", "ttl": 2921}]}, "response": {"id": "0x3f7f", "name": "example114.com", "ttl": 4587, "QR": "Response", "type": "AAAA", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": "739b:20a1:f966:82dc:cd0a:7251:5784:2183", "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0xd5a0", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "CNAME", "name": "example71.com", "ttl": 3266}]}, "response": {"id": "0x8781", "name": "example187.com", "ttl": 1902, "QR": "Response", "type": "CNAME", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": "cname7.example.com", "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "8822", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200266", "utc": "2024-01-08T08:41:57.200267", "epoch": "1704703317.200268"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.161.81", "destination_ip": "192.168.149.241"}, "udp": {"source_port": "53", "destination_port": "49659", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0x6461", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "PTR", "name": "example80.com", "ttl": 134}]}, "response": {"id": "0x9d90", "name": "example159.com", "ttl": 2355, "QR": "Response", "type": "PTR", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": "host93.example.com"}}, {"query": {"transaction_id": "0xbab7", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "CNAME", "name": "example31.com", "ttl": 2006}]}, "response": {"id": "0x68c7", "name": "example133.com", "ttl": 4340, "QR": "Response", "type": "CNAME", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": "cname47.example.com", "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x4e16", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example43.com", "ttl": 1486}]}, "response": {"id": "0x1df0", "name": "example182.com", "ttl": 3664, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns2.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "3485", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200298", "utc": "2024-01-08T08:41:57.200299", "epoch": "1704703317.2003"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.233.71", "destination_ip": "192.168.98.160"}, "udp": {"source_port": "53", "destination_port": "45504", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0xca93", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "A", "name": "example66.com", "ttl": 980}]}, "response": {"id": "0x5ecc", "name": "example182.com", "ttl": 4574, "QR": "Response", "type": "A", "rCode": "NoError", "section": "Answer", "dnsA": "192.168.163.71", "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x7542", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "CNAME", "name": "example86.com", "ttl": 3583}]}, "response": {"id": "0x393c", "name": "example138.com", "ttl": 1368, "QR": "Response", "type": "CNAME", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": "cname15.example.com", "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x90fe", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example76.com", "ttl": 4550}]}, "response": {"id": "0x5268", "name": "example152.com", "ttl": 1220, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns1.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x3a21", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "MX", "name": "example26.com", "ttl": 122}]}, "response": {"id": "0xb2d2", "name": "example191.com", "ttl": 2501, "QR": "Response", "type": "MX", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": "mail76.example.com", "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0xae33", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "MX", "name": "example64.com", "ttl": 1210}]}, "response": {"id": "0x33c9", "name": "example173.com", "ttl": 1946, "QR": "Response", "type": "MX", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": "mail25.example.com", "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "2928", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200323", "utc": "2024-01-08T08:41:57.200324", "epoch": "1704703317.200325"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.198.186", "destination_ip": "192.168.27.120"}, "udp": {"source_port": "53", "destination_port": "56216", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0xa30", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example63.com", "ttl": 2541}]}, "response": {"id": "0xa8cc", "name": "example103.com", "ttl": 383, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns3.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0xd7c2", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example69.com", "ttl": 2473}]}, "response": {"id": "0xa0be", "name": "example173.com", "ttl": 4486, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns1.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x59f7", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "TXT", "name": "example30.com", "ttl": 1561}]}, "response": {"id": "0x2fd8", "name": "example104.com", "ttl": 417, "QR": "Response", "type": "TXT", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": "v=spf1 include:_spf.example.com ~all", "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0x53f3", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example26.com", "ttl": 1326}]}, "response": {"id": "0x6eb7", "name": "example121.com", "ttl": 4500, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns2.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
+{"network": {"frame": {"number": "7102", "on_wire_bytes": "124", "captured_bytes": "124", "interface": {"id": "0", "name": "en1", "description": "Wi-Fi"}, "encapsulation_type": "Ethernet (1)", "arrival_time": {"local": "2024-01-08T16:41:57.200345", "utc": "2024-01-08T08:41:57.200346", "epoch": "1704703317.200346"}, "protocols": ["eth", "ip", "udp", "dns"]}, "ethernet": {"source_mac": "48:5f:08:2b:18:22", "destination_mac": "5c:1b:f4:a0:08:a4", "ethertype": "IPv4"}, "ip": {"version": "4", "header_length": "20", "tos": "0x00", "total_length": "110", "identification": "0x0000", "flags": "0x0", "fragment_offset": "0", "ttl": "151", "protocol": "UDP", "header_checksum": "0x7d88", "source_ip": "192.168.228.215", "destination_ip": "192.168.17.191"}, "udp": {"source_port": "53", "destination_port": "44850", "length": "90", "checksum": "0x7e70"}}, "dns_records": [{"query": {"transaction_id": "0x14da", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "PTR", "name": "example55.com", "ttl": 755}]}, "response": {"id": "0x1abc", "name": "example116.com", "ttl": 4677, "QR": "Response", "type": "PTR", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": "host3.example.com"}}, {"query": {"transaction_id": "0xfb9d", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "NS", "name": "example66.com", "ttl": 4380}]}, "response": {"id": "0x3d19", "name": "example117.com", "ttl": 4330, "QR": "Response", "type": "NS", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": null, "dnsMX": null, "dnsNS": "ns3.example.com", "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}, {"query": {"transaction_id": "0xbd56", "flags": "0x0100", "opcode": "Standard query", "response": false, "authoritative": false, "truncated": false, "recursion_desired": true, "recursion_available": false, "z_reserved": "0", "answer_authenticated": false, "non_authenticated_data": "Unacceptable", "reply_code": "No error", "questions_count": 1, "queries": [{"type": "CNAME", "name": "example63.com", "ttl": 2266}]}, "response": {"id": "0x277", "name": "example194.com", "ttl": 885, "QR": "Response", "type": "CNAME", "rCode": "NoError", "section": "Answer", "dnsA": null, "dnsAAAA": null, "dnsCNAME": "cname86.example.com", "dnsMX": null, "dnsNS": null, "dnsTXT": null, "dnsSOA": null, "dnsSRV": null, "dnsPTR": null}}]}
