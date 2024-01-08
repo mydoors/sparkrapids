@@ -40,7 +40,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
     )
 
   // 从展开的记录中提取信息
-  retdf = retdf
+  var retdf = expandedDf
     .withColumn("id", $"transaction_id")
     .withColumn("name", explode_outer($"queries.name"))
     .withColumn("ttl", explode_outer($"answers.ttl"))
