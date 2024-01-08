@@ -82,7 +82,8 @@ val jsonPath = "/root/spark/data/dns_records.json"
 val rawDf = spark.read.json(jsonPath)
 rawDf.show(false)
 // 将DataFrame转换为Parquet格式
-rawDf.overwrite.parquet("/root/spark/data/dns_records.parquet")
+rawDf.write.mode("overwrite").parquet("/root/spark/data/dns_records.parquet")
+
 
 // 使用GPU加速读取Parquet文件
 val gpuDf = spark.read.parquet("/root/spark/data/dns_records.parquet")
