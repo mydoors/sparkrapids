@@ -108,23 +108,18 @@ def generate_network_info():
         }
     }
 
-def generate_json_records(num_records):
-    dns_records = [generate_dns_record() for _ in range(num_records)]
-    network_info = generate_network_info()
-
-    json_data = {
-        "network": network_info,
-        "dns_records": dns_records
+def generate_json_record():
+    return {
+        "network": generate_network_info(),
+        "dns_record": generate_dns_record()
     }
-
-    return json_data
 
 def main():
     num_records = 10  # 可以调整为所需的数量
-    json_data = generate_json_records(num_records)
-
     with open("dns_records.json", "w") as file:
-        json.dump(json_data, file, indent=4)
+        for _ in range(num_records):
+            json_record = generate_json_record()
+            file.write(json.dumps(json_record) + "\n")
 
 if __name__ == "__main__":
     main()
