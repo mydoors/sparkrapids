@@ -28,14 +28,14 @@ val preprocessedDf = Preprocess(rawDf)
 def GetDnsInfos(df: DataFrame): DataFrame = {
   val filteredDf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
     .select(
-      $"number",
-      $"protocols",
-      $"source_mac",
-      $"destination_mac",
-      $"source_ip",
-      $"destination_ip",
-      $"source_port",
-      $"destination_port",
+      $"network.frame.number".as("number"),
+      $"network.frame.protocols".as("protocols"),
+      $"network.ethernet.source_mac".as("source_mac"),
+      $"network.ethernet.destination_mac".as("destination_mac"),
+      $"network.ip.source_ip".as("source_ip"),
+      $"network.ip.destination_ip".as("destination_ip"),
+      $"network.udp.source_port".as("source_port"),
+      $"network.udp.destination_port".as("destination_port"),
       explode($"dnsRecordList.query.queries").as("query"),
       $"dnsRecordList.response.*"
     )
@@ -85,6 +85,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
     $"dnsPTR"
   )
 }
+
 
 
 // 应用GetDnsInfos函数处理数据
