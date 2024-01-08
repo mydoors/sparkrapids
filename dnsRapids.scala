@@ -14,7 +14,7 @@ def Preprocess(df: DataFrame): DataFrame = {
   df.withColumn("silkAppLabel", lit(53))
     .withColumn("sourceIpAddress", $"network.ip.source_ip")
     .withColumn("destinationIpAddress", $"network.ip.destination_ip")
-    .withColumn("dnsRecordList", explode($"dns_record"))
+    .withColumn("dnsRecordList", $"dns_record")
 
 }
 
