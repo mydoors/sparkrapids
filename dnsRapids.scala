@@ -27,14 +27,6 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
   // 展开dnsRecords并选择query和response的子字段
     val expandedDf = filteredDf
     .select(
-      col("network.frame.number").as("number"),
-      col("network.frame.protocols").as("protocols"),
-      col("network.ethernet.source_mac").as("source_mac"),
-      col("network.ethernet.destination_mac").as("destination_mac"),
-      col("network.ip.source_ip").as("source_ip"),
-      col("network.ip.destination_ip").as("destination_ip"),
-      col("network.udp.source_port").as("source_port"),
-      col("network.udp.destination_port").as("destination_port"),
       col("dnsRecordList.query.*"),
       col("dnsRecordList.response.*")
     )
