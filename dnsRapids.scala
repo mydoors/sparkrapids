@@ -27,6 +27,10 @@ val preprocessedDf = Preprocess(rawDf)
 // GetDnsInfos函数
 def GetDnsInfos(df: DataFrame): DataFrame = {
   val filteredDf = df.filter($"silkAppLabel" === 53 && $"sourceIpAddress".startsWith("192.168.1"))
+    .select((networkFields ++ Array("dnsRecordList")).map(col): _*)
+
+  // 展开dnsRecords并选择query和response的子字段
+  val expandedDf = filteredDf
     .select(
       $"network.frame.number".as("number"),
       $"network.frame.protocols".as("protocols"),
@@ -41,8 +45,8 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
     )
 
   // 从展开的记录中提取信息
-  val retdf = filteredDf
-    .withColumn("id", $"response.transaction_id")
+  val retdf = expandedDf
+    .withColumn("id", $"query.transaction_id")
     .withColumn("name", $"query.name")
     .withColumn("ttl", $"query.ttl")
     .withColumn("type", $"query.type")
@@ -62,6 +66,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
   // 选择相关列
   retdf.select((networkFields ++ Array("id", "name", "ttl", "QR", "type", "rCode", "section", "dnsA", "dnsAAAA", "dnsCNAME", "dnsMX", "dnsNS", "dnsTXT", "dnsSOA", "dnsSRV", "dnsPTR")).map(col): _*)
 }
+
 // 应用GetDnsInfos函数处理数据
 val dnsInfosDf = GetDnsInfos(preprocessedDf)
 
