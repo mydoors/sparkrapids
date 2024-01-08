@@ -35,7 +35,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
   var retdf = expandedDf
     .withColumn("id", $"transaction_id")
     .withColumn("name", explode_outer($"queries.name"))
-    .withColumn("ttl", explode_outer($"answers.ttl"))
+    .withColumn("ttl", explode_outer($"queries.ttl"))
     .withColumn("QR", $"response")
     .withColumn("type", explode_outer($"queries.type"))
     .withColumn("rCode", $"reply_code")
