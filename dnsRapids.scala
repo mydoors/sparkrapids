@@ -35,8 +35,8 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
       col("network.ip.destination_ip").as("destination_ip"),
       col("network.udp.source_port").as("source_port"),
       col("network.udp.destination_port").as("destination_port"),
-      col("dnsRecordsExploded.query.*"),
-      col("dnsRecordsExploded.response.*")
+      col("dnsRecordList.query.*"),
+      col("dnsRecordList.response.*")
     )
 
   // 从展开的记录中提取信息
