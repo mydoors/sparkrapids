@@ -30,7 +30,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
       col("dnsRecordList.query.*"),
       col("dnsRecordList.response.*")
     )
-
+  expandedDf.printSchema()
   // 从展开的记录中提取信息
   var retdf = expandedDf
     .withColumn("id", $"transaction_id")
@@ -50,7 +50,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
     .withColumn("dnsSRV", $"dnsSRV")
     .withColumn("dnsPTR", $"dnsPTR")
     .drop("query", "response")
-
+  retdf.printSchema()
   // 处理SOA, SRV, PTR等
   retdf = retdf
     .withColumn("A", explode_outer($"dnsA")).drop("dnsA").distinct
