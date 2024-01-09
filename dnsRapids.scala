@@ -40,50 +40,7 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
       $"dnsRecordList.response.*"
     )
 
-  val retdf = filteredDf
-    .withColumn("id", $"query.transaction_id")
-    .withColumn("name", $"query.name")
-    .withColumn("ttl", $"query.ttl")
-    .withColumn("type", $"query.type")
-    .withColumn("QR", $"response.QR")
-    .withColumn("rCode", $"response.reply_code")
-    .withColumn("section", $"response.section")
-    .withColumn("dnsA", $"response.dnsA")
-    .withColumn("dnsAAAA", $"response.dnsAAAA")
-    .withColumn("dnsCNAME", $"response.dnsCNAME")
-    .withColumn("dnsMX", $"response.dnsMX")
-    .withColumn("dnsNS", $"response.dnsNS")
-    .withColumn("dnsTXT", $"response.dnsTXT")
-    .withColumn("dnsSOA", $"response.dnsSOA")
-    .withColumn("dnsSRV", $"response.dnsSRV")
-    .withColumn("dnsPTR", $"response.dnsPTR")
-
-  retdf.select(
-    $"number",
-    $"protocols",
-    $"source_mac",
-    $"destination_mac",
-    $"source_ip",
-    $"destination_ip",
-    $"source_port",
-    $"destination_port",
-    $"id",
-    $"name",
-    $"ttl",
-    $"type",
-    $"QR",
-    $"rCode",
-    $"section",
-    $"dnsA",
-    $"dnsAAAA",
-    $"dnsCNAME",
-    $"dnsMX",
-    $"dnsNS",
-    $"dnsTXT",
-    $"dnsSOA",
-    $"dnsSRV",
-    $"dnsPTR"
-  )
+    filteredDf
 }
 
 
