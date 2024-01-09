@@ -40,7 +40,8 @@ def GetDnsInfos(df: DataFrame): DataFrame = {
       $"dnsRecordList.response.*"
     )
 
-    filteredDf
+    filteredDf.printSchema()
+    filteredDF
 }
 
 
