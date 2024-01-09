@@ -49,12 +49,12 @@ val resultsDF = joinedDF.select(
 ).distinct()
 resultsDF.show()
 
-   resultsDF.coalesce(1)
-  .write
-  .mode("overwrite") // 设置写入模式为 "overwrite"
-  .option("header", "true") // 包含头部
-  .option("sep", ",")       // 指定分隔符，默认是逗号
-  .csv("/root/spark/data/results") // 指定输出目录
+  //  resultsDF.coalesce(1)
+  // .write
+  // .mode("overwrite") // 设置写入模式为 "overwrite"
+  // .option("header", "true") // 包含头部
+  // .option("sep", ",")       // 指定分隔符，默认是逗号
+  // .csv("/root/spark/data/results") // 指定输出目录
 
 
 
