@@ -16,7 +16,7 @@ val data = Seq("hello", "world", "this", "is", "rapids").toDF("value")
 processWithRapids(data)
 
 // 读入数据集
-val df = spark.read.format("csv").option("header", "true").load("/root/spark/data/network_data.csv")
+val df = spark.read.format("csv").option("header", "true").load("/root/spark/data/backup/network_data.csv")
 df.printSchema()
 
 // Map 操作：Filter
