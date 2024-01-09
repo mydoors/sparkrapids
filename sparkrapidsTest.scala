@@ -49,7 +49,7 @@ val resultsDF = joinedDF.select(
 ).distinct()
 resultsDF.show()
 
-// resultsDF.coalesce(1)
+   resultsDF.coalesce(1)
   .write
   .mode("overwrite") // 设置写入模式为 "overwrite"
   .option("header", "true") // 包含头部
