@@ -1,6 +1,7 @@
 import json
 import random
 from datetime import datetime
+from multiprocessing import Pool
 
 def generate_dns_record():
     record_types = ["A", "AAAA", "CNAME", "MX", "NS", "TXT", "SOA", "SRV", "PTR"]
@@ -108,8 +109,8 @@ def generate_network_info():
         }
     }
 
-def generate_json_record():
-    num_dns_records = random.randint(1, 5)  # 每个记录包含1到5个DNS记录
+def generate_json_record(_):
+    num_dns_records = random.randint(1, 5)
     dns_records = [generate_dns_record() for _ in range(num_dns_records)]
     network_info = generate_network_info()
 
@@ -118,14 +119,22 @@ def generate_json_record():
         "dns_records": dns_records
     }
 
+# 新增的写入文件函数
+def write_record(record, filename="dns_records.json"):
+    with open(filename, "a") as file:
+        json.dump(record, file)
+        file.write("\n")
+
 def main():
     num_records = 10  # 总共生成10个独立的JSON记录
-    records = [generate_json_record() for _ in range(num_records)]
+    pool = Pool()  # 创建一个进程池
 
-    with open("dns_records.json", "w") as file:
-        for record in records:
-            json.dump(record, file)
-            file.write("\n")  # 每个JSON记录后面加一个换行符
+    records = pool.map(generate_json_record, [None] * num_records)
+    pool.close()
+    pool.join()
+
+    for record in records:
+        write_record(record)
 
 if __name__ == "__main__":
     main()
